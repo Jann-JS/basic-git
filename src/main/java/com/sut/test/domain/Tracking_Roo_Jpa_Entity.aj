@@ -17,19 +17,19 @@ privileged aspect Tracking_Roo_Jpa_Entity {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long Tracking.id;
+    @Column(name = "id_")
+    private Long Tracking.id_;
     
     @Version
     @Column(name = "version")
     private Integer Tracking.version;
     
-    public Long Tracking.getId() {
-        return this.id;
+    public Long Tracking.getId_() {
+        return this.id_;
     }
     
-    public void Tracking.setId(Long id) {
-        this.id = id;
+    public void Tracking.setId_(Long id) {
+        this.id_ = id;
     }
     
     public Integer Tracking.getVersion() {

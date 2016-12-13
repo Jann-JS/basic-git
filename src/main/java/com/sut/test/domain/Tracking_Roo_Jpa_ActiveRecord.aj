@@ -14,7 +14,7 @@ privileged aspect Tracking_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Tracking.entityManager;
     
-    public static final List<String> Tracking.fieldNames4OrderClauseFilter = java.util.Arrays.asList("");
+    public static final List<String> Tracking.fieldNames4OrderClauseFilter = java.util.Arrays.asList("id", "name", "deliveryTime", "deliveryDate", "status");
     
     public static final EntityManager Tracking.entityManager() {
         EntityManager em = new Tracking().entityManager;
@@ -41,9 +41,9 @@ privileged aspect Tracking_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery(jpaQuery, Tracking.class).getResultList();
     }
     
-    public static Tracking Tracking.findTracking(Long id) {
-        if (id == null) return null;
-        return entityManager().find(Tracking.class, id);
+    public static Tracking Tracking.findTracking(Long id_) {
+        if (id_ == null) return null;
+        return entityManager().find(Tracking.class, id_);
     }
     
     public static List<Tracking> Tracking.findTrackingEntries(int firstResult, int maxResults) {
@@ -73,7 +73,7 @@ privileged aspect Tracking_Roo_Jpa_ActiveRecord {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Tracking attached = Tracking.findTracking(this.id);
+            Tracking attached = Tracking.findTracking(this.id_);
             this.entityManager.remove(attached);
         }
     }
