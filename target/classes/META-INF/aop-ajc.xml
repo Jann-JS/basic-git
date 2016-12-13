@@ -1,0 +1,10 @@
+<aspectj>
+<aspects>
+<aspect name="com.sut.test.domain.Tracking_Roo_Jpa_Entity"/>
+<aspect name="com.sut.test.domain.Tracking_Roo_Configurable"/>
+<aspect name="com.sut.test.domain.Tracking_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.sut.test.domain.Tracking_Roo_JavaBean"/>
+<aspect name="com.sut.test.domain.Tracking_Roo_ToString"/>
+</aspects>
+</aspectj>
+
